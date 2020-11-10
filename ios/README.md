@@ -10,7 +10,9 @@
 ## 语言细节
 
 - [+load() 及 +initialize()](https://www.jianshu.com/p/af36edff5d4e): +load() 类加载时候触发，每个 category 的实现都会调用；+initialize() 被使用的时候调用，编译顺序最后的 initialize 会覆盖所有
-- [MRC 与 ARC](https://www.jianshu.com/p/5eac83471b23): 栈区、堆区、全局区、常量区、代码区、 自由存储区；MRC 手动引用计数，ARC 自动引用计数，编译器在合适地方插入 release 消息
+- [五大内存区](https://www.jianshu.com/p/5eac83471b23): 栈区、堆区、全局区、常量区、代码区、 自由存储区；MRC 手动引用计数，ARC 自动引用计数，编译器在合适地方插入 release 消息
+- [内存管理 MRC 及 ARC](https://dcsnail.blog.csdn.net/article/details/79356164#t7): 引用计数原理，仅持有 alloc、new、copy、mutable Copy，其他交给 AutoReleasePool
+- [Autorelease机制及释放时机](https://blog.csdn.net/wangyanchang21/article/details/51037831): 双链表每次申请 4k，插入待观察对象，Push 插入哨兵 nil，Pop 后发送 release 清理链表
 - [Runtime](https://www.jianshu.com/p/2414d5db0852): 获取类名、方法、类实例变量、父类接口
 - [Category 与 Extension](https://www.jianshu.com/p/cafb774ab81f): 一个类可有多个 Category，装饰者模式，部分类函数加载顺序、次数跟编译顺序相关；Extension 是匿名分类，可以加载属性，仅有一个
 - [GCD 多线程](https://www.jianshu.com/p/bdb39ff9d095): main、hight、low、default、background global queue，cocurrent、serial queue，dispatch_once，dispatch group，source
