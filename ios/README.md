@@ -18,6 +18,7 @@
 - [GCD 多线程](https://www.jianshu.com/p/bdb39ff9d095): main、hight、low、default、background global queue，cocurrent、serial queue，dispatch_once，dispatch group，source
 - [NSOperation](https://www.jianshu.com/p/9382e8409bc7): NSTread、GCD、NSOperation 多线程，系统提供的抽象程度最高，最为细粒度控制的方式
 - [KVO 用法及原理](https://www.jianshu.com/p/bcaf178a4b23): C 接口注册回调函数并监听，dealloc 前反注册，原理是在 runtime 动态插入了一个桩 class，转发相关属性的读取
+- [Category 为什么不支持属性](https://blog.csdn.net/jade07/article/details/80234495): Category 是运行期决议的，而编译期对象内存布局已经确定，无法动态生成 setter、getter
 
 ## UI 相关
 
